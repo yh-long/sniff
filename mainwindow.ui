@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>927</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>网卡</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="3">
+     <widget class="QComboBox" name="comboBox"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>规则</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="3">
+     <widget class="QLineEdit" name="filter"/>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="btn_start">
+      <property name="text">
+       <string>开始捕获</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5" colspan="2">
+     <widget class="QPushButton" name="btn_pause">
+      <property name="text">
+       <string>暂停捕获</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="7">
+     <widget class="QPushButton" name="btn_over">
+      <property name="text">
+       <string>结束捕获</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="8">
+     <widget class="QTableWidget" name="showWidget"/>
+    </item>
+    <item row="3" column="0" colspan="6">
+     <widget class="QTableWidget" name="tableWidget"/>
+    </item>
+    <item row="3" column="6" rowspan="4" colspan="2">
+     <widget class="QTreeWidget" name="protoWidget">
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="lb_">
+      <property name="text">
+       <string>总数</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="count"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="lb_ICMP">
+      <property name="text">
+       <string>ICMP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QLineEdit" name="icmp"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="lb_TCP">
+      <property name="text">
+       <string>TCP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="tcp"/>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="lb_ARP">
+      <property name="text">
+       <string>ARP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLineEdit" name="ARP"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="lb_UDP">
+      <property name="text">
+       <string>UDP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="udp"/>
+    </item>
+    <item row="6" column="2">
+     <widget class="QLabel" name="lb_HTTP">
+      <property name="text">
+       <string>HTTP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QLineEdit" name="http"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>927</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="file_open"/>
+    <addaction name="file_save"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="ARP_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="help"/>
+    <addaction name="exitq"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="file_open">
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="file_save">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="ARP_2">
+   <property name="text">
+    <string>ARP欺骗</string>
+   </property>
+   <property name="toolTip">
+    <string>arp</string>
+   </property>
+  </action>
+  <action name="help">
+   <property name="text">
+    <string>文档</string>
+   </property>
+   <property name="toolTip">
+    <string>help</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="exitq">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
